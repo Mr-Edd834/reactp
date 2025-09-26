@@ -1,0 +1,10 @@
+.App{
+    display:inline-block;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-top:70px ;
+    gap: 50px;
+}
