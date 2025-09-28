@@ -7,4 +7,10 @@
     grid-template-columns: auto auto;
     margin-top:70px ;
     gap: 50px;
+    background-image: url('https://i.pinimg.com/736x/ab/86/9b/ab869b111b99108f2615613537113ae9.jpg');
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }

@@ -1,9 +1,20 @@
 import React from 'react';
 import './Meals.css';    
 import { Heart } from "lucide-react";
+import { useState } from "react";   
 import { Plus, Minus } from "lucide-react";
 
 function Card(){
+ const [quantity, setQuantity] = useState(0);
+
+      const increase = () => {
+    setQuantity((prev) => prev + 1);
+  };
+
+  const decrease = () => {
+    setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+  };
+
     return(
         <>
         <div className="Card">
@@ -14,13 +25,13 @@ function Card(){
             </div>
             <div className='card-description'>Get your favorite pizza big at a discount today at GoGrub.</div>
                <hr className='horizontal-line'></hr>
-             <div className='card-price'> <b>Ksh 2000 </b></div>
+             <div className='card-price'> <h3>Ksh 2000 </h3></div>
             <div className='icons'>
             <Heart size={16} colour="dark-gray"/>
             <div className='counter'>
-                <button className='counter-button'><Minus size={16}/></button>
-                <span className='quantity'>1</span>
-                <button className='counter-button'><Plus size={16}/></button>
+                <button className='counter-button' onClick={decrease}><Minus size={16}/></button>
+                 <span className="quantity">{quantity}</span>
+                <button className='counter-button' onClick={increase}><Plus size={16}/></button>
                 </div>
             </div>
             <hr className='horizontal-line'></hr>

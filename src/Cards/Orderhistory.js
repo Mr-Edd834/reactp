@@ -1,73 +1,55 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { Heart } from "lucide-react";
+import react from "react";
+import './Orderhistory.css';
 
-export default function MealCard() {
-  const [liked, setLiked] = useState(false);
-  const [quantity, setQuantity] = useState(1);
+function OrderhistoryCard(){
+    return(
+          <div className="orderhistory-card">
+            <div className="orderhistory-card-date">
+                <p>Mon</p>
+                <h3>27/</h3>
+                <h3>09/</h3>
+                <h3>2025</h3>
+            </div>
+            <hr className="orderhistory-line"></hr>
+            <div className="orderhistory-card-details">
+                <h3>Large Pizza</h3>
+                <p>Ksh 2000</p>
+                <h3>Large Soda</h3>
+                <p>Ksh 250</p>
+                <h3>Ice Cream</h3>
+                <p>Ksh 300</p>
+            </div>
+            <hr className="orderhistory-line-details"></hr>
+            <div className="orderhistory-card-time">
+                <h3>Delivered at: 12:23 pm.</h3>
+                </div>
+                  <hr className="orderhistory-line-details-time"></hr>
+            <div className="orderhistory-card-total">
+                <h3>Total paid:</h3>
+                <p>Ksh 2550</p>
+                </div>
+                 <hr className="orderhistory-line-details-time"></hr>
+                <div className="orderhistory-card-payment">
+                <h3>Payment by:</h3>
+                <p>Mpesa</p>
+                </div>
+                 <hr className="orderhistory-line-details-time"></hr>
+                <div className="orderhistory-card-id">
+                <h3>Order ID:</h3>
+                <p>#1234567890</p>
+                </div>
+                 <hr className="orderhistory-line-details-time"></hr>
+                 <div className="orderhistory-card-paid-time">
+                <h3>Paid at: 12:00 pm.</h3>
+                </div>
+                
 
-  // handle like with shake animation
-  const toggleLike = () => {
-    setLiked(!liked);
-  };
 
-  return (
-    <div className="w-80 bg-white rounded-2xl shadow-lg overflow-hidden border">
-      {/* Image */}
-      <div className="h-40 bg-gray-200 flex items-center justify-center">
-        <span className="text-gray-500">Image</span>
-      </div>
 
-      {/* Content */}
-      <div className="p-4">
-        <div className="flex justify-between items-center mb-2">
-          <h2 className="text-lg font-bold">Large Pizza</h2>
-          <span className="text-green-600 font-semibold">Ksh 2000</span>
-        </div>
-        <p className="text-gray-500 text-sm mb-3">
-          Get your favorite pizza big at a discount.
-        </p>
 
-        {/* Like + Counter */}
-        <div className="flex justify-between items-center mb-4">
-          {/* Like button with shake */}
-          <motion.button
-            whileTap={{ scale: 0.9 }}
-            animate={liked ? { rotate: [0, -15, 15, 0] } : {}}
-            transition={{ duration: 0.4 }}
-            onClick={toggleLike}
-            className="focus:outline-none"
-          >
-            <Heart
-              className={`w-6 h-6 ${
-                liked ? "text-red-500 fill-red-500" : "text-gray-400"
-              }`}
-            />
-          </motion.button>
 
-          {/* Counter */}
-          <div className="flex items-center space-x-3">
-            <button
-              onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-lg font-bold"
-            >
-              -
-            </button>
-            <span className="font-medium">{quantity}</span>
-            <button
-              onClick={() => setQuantity((q) => q + 1)}
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-200 text-lg font-bold"
-            >
-              +
-            </button>
           </div>
-        </div>
 
-        {/* Bottom Button */}
-        <button className="w-full py-2 bg-green-500 text-white font-semibold rounded-xl hover:bg-green-600 transition">
-          Get it!
-        </button>
-      </div>
-    </div>
-  );
+     )
 }
+export default OrderhistoryCard;
