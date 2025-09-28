@@ -3,7 +3,7 @@ import { Plus, Minus } from "lucide-react";
 import { MoreVertical } from "lucide-react";
 import { useState } from "react";   
 import React from 'react';
-import './Favorites.css';
+import './FavoritesCard.css';
 
 function FavoritesCard(){
     const [quantity, setQuantity] = useState(0);

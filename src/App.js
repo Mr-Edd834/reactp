@@ -1,15 +1,15 @@
 import React from 'react';
-import Card from './Cards/Meals';
+import MealsCard from './Cards/Meals';
 import './App.css';
-import FavoritesCard from './Cards/Favorites';
-import OrderhistoryCard from './Cards/Orderhistory';
+import FavoritesCard from './Cards/FavoritesCard';
+import OrderhistoryCard from './Cards/OrderhistoryCard';
 
 function App() {
   return (
     <>
     <div className="App">
 
-  <Card/>
+  <MealsCard/>
       <FavoritesCard/>
   <OrderhistoryCard/>
       </div>

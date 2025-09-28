@@ -4,7 +4,7 @@ import { Heart } from "lucide-react";
 import { useState } from "react";   
 import { Plus, Minus } from "lucide-react";
 
-function Card(){
+function MealsCard(){
  const [quantity, setQuantity] = useState(0);
 
       const increase = () => {
@@ -44,4 +44,4 @@ function Card(){
     )
 }
 
-export default Card;
+export default MealsCard;
