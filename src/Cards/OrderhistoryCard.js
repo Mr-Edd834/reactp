@@ -40,7 +40,7 @@ function OrderhistoryCard(){
                 </div>
                  <hr className="orderhistory-line-details-time"></hr>
                  <div className="orderhistory-card-paid-time">
-                <h3>Paid at: 12:00 pm.</h3>
+                <h3>Paid at: 12:00 pm. </h3>
                 </div>
                 
 

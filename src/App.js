@@ -3,6 +3,7 @@ import MealsCard from './Cards/Meals';
 import './App.css';
 import FavoritesCard from './Cards/FavoritesCard';
 import OrderhistoryCard from './Cards/OrderhistoryCard';
+import CheckoutCard from './Cards/CheckoutCard';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
   <MealsCard/>
       <FavoritesCard/>
   <OrderhistoryCard/>
+  <CheckoutCard/>
       </div>
   </>
   );
