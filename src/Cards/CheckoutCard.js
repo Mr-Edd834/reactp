@@ -4,15 +4,18 @@ import { Plus, Minus } from "lucide-react";
 import { useState } from "react";   
 
 function CheckoutCard(){
-      const [quantity, setQuantity] = useState(0);
+      const [quantity, setQuantity] = useState(1);
+      const unitPrice = 2000;
     
-          const increase = () => {
+      const increase = () => {
         setQuantity((prev) => prev + 1);
       };
     
       const decrease = () => {
-        setQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+        setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
       };
+
+      const totalPrice = quantity * unitPrice;
 
 return(
     <>
@@ -23,7 +26,7 @@ return(
 <b>Large Pizza</b>
 </div>
 <div className="checkout-card-price">
-<h3>Ksh 2000</h3>
+<h3>Ksh {unitPrice}</h3>
 </div>
  <div className='checkout-counter'>
                 <button className='checkout-counter-button' onClick={decrease}><Minus size={16}/></button>
@@ -31,7 +34,7 @@ return(
                 <button className='checkout-counter-button' onClick={increase}><Plus size={16}/></button>
                 </div>
 <div className="checkout-total">
-    <h3>Total: Ksh 2000</h3>
+    <h3>Total: Ksh {totalPrice.toLocaleString()}</h3>
 </div>
 </div>
 </>
